@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-
-"""Define class Square."""
+"""Define a class Square."""
 
 
 class Square:
@@ -8,6 +7,7 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """Initialize a new square.
+
         Args:
             size (int): The size of the new square.
             position (int, int): The position of the new square.
@@ -67,3 +67,4 @@ class Square:
             [print("#", end="") for k in range(0, self.__size)]
             if i != self.__size - 1:
                 print("")
+        return ("")
