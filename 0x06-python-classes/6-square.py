@@ -8,7 +8,7 @@ class Square:
         size (int): size of ne side of square
         position (tuple): position of the square in 2D space
         """
-    
+
     def __init__(self, size=0, position=(0, 0)):
         """Initializes the class
         Args:
@@ -60,12 +60,12 @@ class Square:
             None
         """
         if type(value) is not tuple or len(value) != 2 or \
-            type(value[0]) is not int or value[0] < 0 or \
-            type(value[1]) is not int or value[1] < 0:
-                raise TypeError("position must be a tuple of 2 positive integers")
+                type(value[0]) is not int or value[0] < 0 or \
+                type(value[1]) is not int or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
         else:
-            sel.__position = value
-        
+            self.__position = value
+
     def area(self):
         """ calculates the area of the square
         Args:
