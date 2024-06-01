@@ -39,18 +39,16 @@ checking addition of negative and positive numbers
 
 checking addition of non number with number
 	>>> add_integer("2", 3)
-	Traceback: (most recent call last)
+	Traceback (most recent call last):
 	...
 	TypeError: a must be an integer
 
 checking addition of more than two arguments
 	>>> add_integer(1, 2, 3)
-	Traceback: (most recent call last)
+	Traceback (most recent call last):
 	...
-	TypeError: add_integer takes 2 arguments but 3 were given
+	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
 checking addition  with 1 args
 	>>> add_integer(1)
-	Traceback: (most recent call last)
-	...
-	TypeError: add_integer takes 2 arguments but 1 provided
+	99

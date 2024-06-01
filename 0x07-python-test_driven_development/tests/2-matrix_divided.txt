@@ -1,0 +1,63 @@
+This is the "2-matrix_divided" module doctest
+======================================
+This module holds the function "matrix_divided(matrix, div)"
+-----------------------------------------------------------
+
+Importing the function from the module
+	>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Checking the modules docstring
+	>>> md = __import__("2-matrix_divided").__doc__
+	>>> len(md) > 1
+	True
+
+Checking the function docstring
+	>>> fd = __import__("2-matrix_divided").matrix_divided.__doc__
+	>>> len(fd) > 1
+	True
+
+checking the regular division
+	>>> matrix = [[3, 6, 9, 12], [30, 33, 36, 39]]
+	>>> matrix_divided(matrix, 3)
+	[[1.0, 2.0, 3.0, 4.0], [10.0, 11.0, 12.0, 13.0]]
+
+checking division of the matrix with a float
+	>>> matrix = [[2, 4, 8, 12], [16, 20, 24, 26]]
+	>>> matrix_divided(matrix, 2.0)
+	[[1.0, 2.0, 4.0, 6.0], [8.0, 10.0, 12.0, 13.0]]
+
+checking division of matrix containing floats with integer
+	>>> matrix = [[4.0, 6.0, 8.0, 10.0], [14.0, 16.0, 18.0, 20.0]]
+	>>> matrix_divided(matrix, 2)
+	[[2.0, 3.0, 4.0, 5.0], [7.0, 8.0, 9.0, 10.0]]
+
+checking division of matrix containing floats and with float
+	>>> matrix_divided([[4.0, 6.0, 8.0, 10.0], [14.0, 16.0, 18.0, 20.0]], 2.0)
+	[[2.0, 3.0, 4.0, 5.0], [7.0, 8.0, 9.0, 10.0]]
+
+checking division of matrix containing non numbers with float
+        >>> matrix_divided([[4.0, 6.0, "8", 10.0], [14.0, 16.0, 18.0, 20.0]], 2.0)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Checking for no args:
+	 >>> matrix_divided()
+         Traceback (most recent call last):
+         ...
+         TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+checking division of matrix containing  with non integer or float
+	>>> matrix_divided([[3, 6, 9, 12], [30, 33, 36, 39]], "3")
+	Traceback (most recent call last):
+	...
+	TypeError: div must be a number
+
+checking division of matrix with zero
+	>>> matrix_divided([[3, 6, 9, 12], [30, 33, 36, 39]], 0)
+        Traceback (most recent call last):
+        ...
+        ZeroDivisionError: division by zero
+
+
+	
