@@ -1,0 +1,45 @@
+This is the "text_identation" doctest module
+============================================
+The function being tested is "text-identation"
+--------------------------------------------
+
+Importing the function from the module
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Checking the module docstring
+	>>> md = __import__('5-text_indentation').__doc__
+	>>> len(md) > 1
+	True
+
+Checking the function docstring
+	>>> fd = __import__('5-text_indentation').text_indentation.__doc__
+	>>> len(fd) > 1
+	True
+
+Checking for no args:
+	>>> text_indentation()
+	Traceback (most recent call last):
+	...
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Checking for passing non-string type:
+	 >>> text_indentation(1)
+         Traceback (most recent call last):
+         ...
+         TypeError: text must be a string
+
+checking the function with a string including the three special characters
+	>>> text_indentation("Hello. How are you? I hope you are doing well: Stay safe.")
+        Hello.
+        <BLANKLINE>
+        How are you?
+        <BLANKLINE>
+        I hope you are doing well:
+        <BLANKLINE>
+        Stay safe.
+        <BLANKLINE>
+
+Checking the function with a string containing no special characters
+	>>> text_indentation("No special characters here")
+	No special characters here
+

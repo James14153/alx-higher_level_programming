@@ -1,0 +1,35 @@
+This is the "3-say_my_name" module doctest
+==========================================
+This module supplies the function "say_my_name(first_name, last_name="")"
+--------------------------------------------------------------------------
+
+Importing the function from the module
+	>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Checking the module docstring
+	>>> md = __import__("3-say_my_name").__doc__
+	>>> len(md) > 1
+	True
+
+Checking the function docstring
+	>>> fd = __import__("3-say_my_name").say_my_name.__doc__
+	>>> len(md) > 1
+	True
+
+Checking the regular name printing
+	>>> say_my_name("John", "Kamau")
+	My name is John Kamau
+
+Checking for non string input
+	>>> say_my_name(10, "kelvin")
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+Checking for non string input
+	>>> say_my_name("John", 15)
+	Traceback (most recent call last):
+	...
+	TypeError: last_name must be a string
+
+
